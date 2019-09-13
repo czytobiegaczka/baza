@@ -13,14 +13,32 @@ namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+        private MySQLDB MyConnect;
+
         public Form1()
         {
             InitializeComponent();
+            MyConnect = new MySQLDB();
         }
 
         private void BtnConnect_Click(object sender, EventArgs e)
         {
+            MyConnect.CreateTable();
+        }
 
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            MyConnect.CreateTable();
+        }
+
+        private void BtnWaga_Click(object sender, EventArgs e)
+        {
+            MyConnect.CreateTableWaga();
+        }
+
+        private void BtnTrening_Click(object sender, EventArgs e)
+        {
+            MyConnect.CreateTableTrening();
         }
     }
 }

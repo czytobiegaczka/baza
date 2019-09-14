@@ -40,5 +40,16 @@ namespace WindowsFormsApp2
         {
             MyConnect.CreateTableTrening();
         }
+
+        private void BtnWstaw_Click(object sender, EventArgs e)
+        {
+            int miesiac = 10;
+            MyConnect.WstawDane(DateTime.Now.Year, miesiac);
+        }
+
+        private void BtnRozlacz_Click(object sender, EventArgs e)
+        {
+            MyConnect.Rozlacz();
+        }
     }
 }
